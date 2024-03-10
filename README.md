@@ -6,7 +6,9 @@ WeatherSDK is a Python package that allows you to retrieve weather information f
 
 You can install the WeatherSDK package using pip: 
 
+
     pip install weather_sdk
+
 
 ## Usage
 
@@ -15,30 +17,32 @@ To use WeatherSDK in your Python code, follow these steps:
 1. Import the WeatherSDK class:
 
 
-    from weathersdk import WeatherSDK
+
+        from weathersdk import WeatherSDK
+
 
 
 2. To use the WeatherSDK package, you need to get an API key from OpenWeatherMap. Visit the [OpenWeatherMap website](https://openweathermap.org/) and sign up to get your API key.
 3. Initialize an instance of the WeatherSDK class with your API key and the desired mode:
 
 
-    api_key = "<your-api-key>"
-    mode = 'on_demand' or 'polling'
-    sdk = WeatherSDK(api_key=api_key, mode=mode)
+        api_key = "<your-api-key>"
+        mode = 'on_demand' or 'polling'
+        sdk = WeatherSDK(api_key=api_key, mode=mode)
 
 
 4. Retrieve weather data for a specific city using the 'get_weather' method:
 
-
-    city = 'New York'
-    weather_data = sdk.get_weather(city=city)
-    print(weather_data)
+        city = 'New York'
+        weather_data = sdk.get_weather(city=city)
+        print(weather_data)
 
 5. Delete an SDK instance by removing its key from storage using the 'delete' method.
 
 
-    sdk = WeatherSDK(api_key=api_key, mode=mode)
-    sdk.delete()
+
+        sdk = WeatherSDK(api_key=api_key, mode=mode)
+        sdk.delete()
 
 
 ## Modes of Operation
